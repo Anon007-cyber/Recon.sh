@@ -18,7 +18,9 @@ cp recon.sh /bin
 
 * send all tool to /bin (for it can be execute from anywhere)
 
-#// required tools for this script
+*required tools for this script
+-------------------------------
+
 httpx
 shuffledns
 subfinder
