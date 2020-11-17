@@ -30,3 +30,12 @@ http_prob(){
 }
 
 http_prob
+
+scanner(){
+	cat $domain/Recon/httpx.txt | nuclei -t /root/nuclei-templates/cves/ -c 50 -o $domain/Recon/nuclei/cves.txt
+	cat $domain/Recon/httpx.txt | nuclei -t /root/nuclei-templates/technologies -c 50 -o $domain/Recon/nuclei/vulnerabilities.txt
+	cat $domain/Recon/httpx.txt | nuclei -t /root/nuclei-templates/files/ -c 50 -o $domain/Recon/nuclei/files.txt
+
+
+}
+scanner
